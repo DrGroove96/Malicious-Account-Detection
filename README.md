@@ -1,6 +1,3 @@
-***
-
-```markdown
 # Malicious Account Detection in Social Networks via Graph Neural Networks
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -113,11 +110,10 @@ If you use the code or findings from this project in your research, please cite 
 }
 ```
 
-## 👨‍💻 Author
+👨‍💻 Author
 
-*   **Shen-Han Chiu** - [LinkedIn Profile](https://www.linkedin.com/in/chiushenhan/)
+**Shen-Han Chiu** - [LinkedIn Profile](https://www.linkedin.com/in/chiushenhan/)
 
-## 📄 License
+📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-```
