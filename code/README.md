@@ -137,4 +137,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-Please contact [spc6178@psu.edu or chiushenhan@gmail.com] for further assistance of this repo. 
+Please contact [spc6178@psu.edu or chiushenhan@gmail.com] for further assistance. 
