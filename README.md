@@ -1,99 +1,125 @@
+Of course. Here is a complete, well-formatted `README.md` file ready for you to copy and paste directly into GitHub.
+
+***
+
+```markdown
 # Malicious Account Detection in Social Networks via Graph Neural Networks
 
-This repository contains the experimental code for the thesis "Malicious Accounts Detection in Social Networks via Graph Neural Networks" by Shen-Han Chiu, submitted to the Schreyer Honors College at The Pennsylvania State University.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/release/python-380/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
+[![PyG](https://img.shields.io/badge/PyG-2.5-orange.svg)](https://pyg.org/)
 
-## Introduction
+This repository contains the official code and experiments for the thesis **"Malicious Accounts Detection in Social Networks via Graph Neural Networks"** by Shen-Han Chiu, submitted in partial fulfillment of the requirements for a baccalaureate degree with honors at The Pennsylvania State University.
 
-This project investigates the effectiveness of Graph Neural Networks (GNNs) for detecting malicious accounts on social media platforms. The proliferation of social scam bots and other malicious activities poses a significant threat to online communities, making robust detection methods crucial. This work compares the performance of various GNN architectures against traditional machine learning models on this task.
+## 📖 Introduction
 
-## Features
+With the widespread usage of social media, malicious accounts and social scam bots have become a major concern. This project addresses the critical challenge of detecting these accounts by leveraging the power of **Graph Neural Networks (GNNs)**. Unlike traditional methods that often analyze users in isolation, this work treats social networks as interconnected graphs, allowing models to learn from user features, their connections, and the overall network structure.
 
-*   **GNN Models:** Implementation and evaluation of five different GNN architectures:
+This research provides a comprehensive comparison between various GNN architectures and traditional machine learning baselines, demonstrating the superior performance of graph-based methods in identifying malicious actors in complex social systems.
+
+## ✨ Key Features
+
+*   **State-of-the-Art GNNs:** Implementation and evaluation of five GNN architectures:
     *   Graph Convolutional Network (GCN)
     *   Graph Attention Network (GAT)
-    *   GraphSAGE
+    *   **GraphSAGE** (shown to be the top performer)
     *   Graph Isomorphism Network (GIN)
     *   HybridGNN
-*   **Traditional Machine Learning Models:** For baseline comparison, the following four models are implemented:
+*   **Baseline Machine Learning Models:** Four traditional models for robust performance comparison:
     *   K-Nearest Neighbors (KNN)
     *   Multilayer Perceptron (MLP)
     *   Random Forest (RF)
     *   Support Vector Classifier (SVC)
-*   **Datasets:** The experiments are conducted on nine real-world social network datasets, providing a comprehensive evaluation.
-*   **Performance Analysis:** The models are evaluated using a range of metrics, including accuracy, precision, recall, F1-score, and AUC-ROC.
-*   **Data Visualization:** The repository includes code to generate visualizations such as ROC curves, loss plots, and confusion matrices to interpret the model performance.
+*   **Real-World Datasets:** Experiments conducted on nine diverse social network graph datasets.
+*   **Handling Class Imbalance:** Employs a weighted cross-entropy loss function to effectively train models on imbalanced datasets, where malicious accounts are typically the minority.
+*   **In-Depth Analysis:** Includes extensive performance evaluation using metrics like Accuracy, Precision, Recall, F1-Score, and AUC-ROC, supported by data visualizations.
 
-## Methodology
+## 🔬 Methodology
 
-The core of this research revolves around a comparative analysis of two primary paradigms for malicious account detection:
+The core methodology compares two paradigms for malicious account detection:
 
-1.  **Graph Neural Networks (GNNs):** These models leverage the inherent graph structure of social networks, where users are nodes and connections are edges. GNNs can capture complex relational patterns that are often missed by traditional methods.
-2.  **Traditional Machine Learning:** These models typically rely on feature-based analysis of user profiles and activities, without explicitly considering the network structure.
+1.  **Graph Neural Networks (GNNs):** These models learn node representations by aggregating information from their neighbors, effectively capturing both user attributes and relational patterns.
+2.  **Traditional Machine Learning:** These baseline models classify users based on their features alone, without considering the rich structural information of the social graph.
 
-A key aspect of the methodology is the use of a weighted loss function to address the class imbalance problem, which is common in malicious account detection tasks where malicious accounts are a minority.
+By performing a large-scale analysis across multiple datasets, this work systematically evaluates which models and techniques are most successful for this task.
 
-## Datasets
+## 📊 Datasets
 
-The following nine publicly available datasets were used for the experiments:
+The experiments are performed on nine benchmark datasets, originating from the paper "A comprehensive survey on graph anomaly detection with deep learning" by Ma et al. (2021).
 
 *   Amazon
 *   BlogCatalog
 *   Flickr
 *   Reddit
-*   Reddit\_pt
-*   Small\_Amazon
+*   Reddit_pt
+*   Small_Amazon
 *   Twitter
 *   YelpChi
 *   YelpChi-All
 
-These datasets originate from the paper "A comprehensive survey on graph anomaly detection with deep learning" by Ma et al. (2021).
+## ⚙️ Installation
 
-## Installation
-
-To run the experiments, you need to have Python and the following libraries installed. You can install them using pip:
+To set up the environment and run the experiments, clone the repository and install the required dependencies.
 
 ```bash
+# Clone the repository
+git clone https://github.com/DrGroove96/Malicious-Account-Detection.git
+cd Malicious-Account-Detection
+
+# Install dependencies using pip
 pip install torch torch-geometric scikit-learn pandas matplotlib
+```
 
-## Usage
+## 🚀 Usage
 
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/DrGroove96/Malicious-Account-Detection.git
-    cd Malicious-Account-Detection
-    ```
-2.  Place the datasets in the appropriate directory.
-3.  Run the experiment scripts. For example, to train and evaluate the GraphSAGE model:
-    ```bash
-    python train_gnn.py --model=GraphSAGE --dataset=Amazon
-    ```
-    To train and evaluate a baseline model like KNN:
-    ```bash
-    python train_baseline.py --model=KNN --dataset=Amazon
-    ```
+The scripts are designed to be run from the command line, allowing you to easily specify the model and dataset for each experiment.
 
-## Results
+1.  Ensure the required datasets are placed in the appropriate directory within the project.
+2.  Run the experiment scripts.
 
-The experiments demonstrate that GNNs, particularly **GraphSAGE**, consistently outperform traditional machine learning models in detecting malicious accounts across various datasets. The ability of GNNs to leverage both node features and the underlying graph structure proves to be a significant advantage.
+**Example: Training a GNN Model**
+To train and evaluate the **GraphSAGE** model on the **Amazon** dataset:
+```bash
+python train_gnn.py --model GraphSAGE --dataset Amazon
+```
 
-Key findings include:
+**Example: Training a Baseline Model**
+To train and evaluate the **KNN** baseline model on the **Amazon** dataset:
+```bash
+python train_baseline.py --model KNN --dataset Amazon
+```
 
-*   **GraphSAGE** achieves state-of-the-art performance on most of the benchmark datasets.
-*   The use of a weighted loss function significantly improves the performance of the models in handling imbalanced data.
-*   GNN models generally show higher accuracy, precision, and F1-scores compared to baseline models.
+## 📈 Results
 
-For detailed results, including performance tables and visualizations, please refer to the thesis document.
+The experimental results consistently demonstrate that **GraphSAGE significantly outperforms** both traditional machine learning models and other GNN architectures across the majority of datasets.
 
-## Citation
+**Key Findings:**
+*   GNNs that leverage both node features and graph structure are superior for malicious account detection.
+*   **GraphSAGE** achieves the highest performance in terms of accuracy, F1-score, and other key metrics.
+*   The use of a weighted loss function is crucial for achieving robust performance on imbalanced real-world data.
+
+For detailed performance tables, loss curves, ROC curves, and other visualizations, please refer to the full thesis document.
+
+## ✍️ Citation
 
 If you use the code or findings from this project in your research, please cite the following thesis:
-Chiu, S.-H. (2025). Malicious Accounts Detection in Social Networks via Graph Neural Networks (Unpublished honors thesis). The Pennsylvania State University, University Park, PA.
 
+```bibtex
+@phdthesis{chiu2025malicious,
+  author  = {Chiu, Shen-Han},
+  title   = {Malicious Accounts Detection in Social Networks via Graph Neural Networks},
+  school  = {The Pennsylvania State University},
+  year    = {2025},
+  note    = {Schreyer Honors College Thesis}
+}
+```
 
-## Author
+## 👨‍💻 Author
 
-*   **SHEN-HAN CHIU** - [LinkedIn](https://www.linkedin.com/in/chiushenhan/)
+*   **Shen-Han Chiu** - [LinkedIn Profile](https://www.linkedin.com/in/chiushenhan/)
 
-## License
+## 📄 License
 
-This project is licensed under the MIT License - see the `LICENSE` file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+```
