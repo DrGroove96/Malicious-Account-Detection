@@ -1,5 +1,3 @@
-Of course. Here is a complete, well-formatted `README.md` file ready for you to copy and paste directly into GitHub.
-
 ***
 
 ```markdown
