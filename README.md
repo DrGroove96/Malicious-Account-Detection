@@ -53,6 +53,22 @@ The experiments are performed on nine benchmark datasets, originating from the p
 *   YelpChi
 *   YelpChi-All
 
+## 📊 Dataset Statistics
+
+The experiments in this research were conducted on nine real-world social network and graph-based datasets. The statistics for each are summarized below. These datasets originate from the paper "A comprehensive survey on graph anomaly detection with deep learning" by Ma et al. (2021).
+
+| Dataset        |         Nodes |           Edges |        Features | Classes | Avg. Degree |   Density | Components | Clustering Coeff. |
+| :------------- | --------------:| ----------------:| ----------------:| --------:| ------------:| ----------:| -----------:| ------------------:|
+| **Amazon**     |         10,224 |         175,608 |              25 |        2 |       34.35 | 0.003360   |         331 |              0.691 |
+| **BlogCatalog**|          5,196 |         172,783 |           8,189 |        2 |       66.51 | 0.012802   |           1 |              0.123 |
+| **Flickr**     |          7,575 |         241,304 |          12,047 |        9 |       63.71 | 0.008412   |           1 |              0.330 |
+| **Reddit**     |         10,984 |          89,500 |              64 |        2 |       16.30 | 0.001484   |           3 |              0.000 |
+| **Reddit PT**  |         10,984 |          89,500 |              64 |        2 |       16.30 | 0.001484   |           3 |              0.000 |
+| **Small Amazon**|         1,549 |          18,983 |             661 |        2 |       24.51 | 0.015833   |           1 |              0.640 |
+| **Twitter**    |          4,865 |         139,305 |             820 |        2 |       57.27 | 0.011774   |           9 |              0.267 |
+| **YelpChi-all**|         45,941 |       3,846,979 |              32 |        2 |      167.47 | 0.003646   |          13 |              0.774 |
+| **YelpChi**    |         23,831 |          49,315 |              32 |        2 |        4.14 | 0.000174   |       7,308 |              0.658 |
+
 ## ⚙️ Installation
 
 To set up the environment and run the experiments, clone the repository and install the required dependencies.
