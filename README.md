@@ -317,7 +317,7 @@ For detailed performance tables, loss curves, ROC curves, and other visualizatio
 If you use the code or findings from this project in your research, please cite the following thesis:
 
 ```bibtex
-@phdthesis{chiu2025malicious,
+@thesis{chiu2025malicious,
   author  = {Chiu, Shen-Han},
   title   = {Malicious Accounts Detection in Social Networks via Graph Neural Networks},
   school  = {The Pennsylvania State University},
